@@ -12,7 +12,7 @@ config()
 const app=express()
 app.use(express.json())
 const corsOrigin ={
-    origin:"http://localhost:5173",
+    origin:"https://pdf-frontend-cnyr.onrender.com",
     credentials: true
 }
 app.use(cors(corsOrigin))
