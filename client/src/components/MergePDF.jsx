@@ -24,14 +24,14 @@ const MergePDF = () => {
     try {
       setLoading(true);
       const res = await axios.post(
-        "http://localhost:3000/api/pdf/merge",
+        "https://pdf-9q36.onrender.com/api/pdf/merge",
         formData,
         {
           headers: { "Content-Type": "multipart/form-data" },
         }
       );
 
-      setDownloadUrl(`http://localhost:3000${res.data.downloadUrl}`);
+      setDownloadUrl(`https://pdf-9q36.onrender.com${res.data.downloadUrl}`);
     } catch (error) {
       console.error(error);
       alert("Failed to merge PDFs.");
